@@ -10,33 +10,26 @@ class PersonAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'sku', 'description')
-    list_filter = ('created_at', 'updated_at')
+    list_filter = ('title', 'description')
     search_fields = ['title', 'description']
 
 
 class ProductImageAdmin(admin.ModelAdmin):
-    list_display = ('product', 'file_path')
-    list_filter = ('created_at', 'updated_at')
-    search_fields = ['product']
+    pass
 
 
 class ProductVariantPriceAdmin(admin.ModelAdmin):
-    list_display = ('product_variant_one',
-                    'product_variant_two', 'product_variant_three')
-    list_filter = ('created_at', 'updated_at')
-    search_fields = ['product']
+    pass
 
 
 class ProductVariantAdmin(admin.ModelAdmin):
-    list_display = ('id', 'product')
-    list_filter = ('created_at', 'updated_at')
-    search_fields = ['product', 'id', 'variant_title']
+    pass
 
 
 class VariantAdmin(admin.ModelAdmin):
     list_display = ('title',
                     'description')
-    list_filter = ('created_at', 'updated_at')
+    list_filter = ('title', 'description')
     search_fields = ['title', 'description']
 
 
