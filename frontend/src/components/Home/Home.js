@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { APiEndPoints } from "../../ApiEndPoints";
+import ProductInformation from "../ProductInfo/Information";
+import "./Home.css";
 
 const Home = () => {
   const [productInfo, setProductInfo] = useState({
     products: [],
     variants: [],
-    productVeriants: [],
+    productVariants: [],
     productVariantPrices: [],
     productImages: [],
   });
@@ -24,8 +26,8 @@ const Home = () => {
       setProductInfo({
         products: [...productInfo.products, ...product.data],
         variants: [...productInfo.variants, ...variant.data],
-        productVeriants: [
-          ...productInfo.productVeriants,
+        productVariants: [
+          ...productInfo.productVariants,
           ...productVariant.data,
         ],
         productVariantPrices: [
@@ -44,6 +46,7 @@ const Home = () => {
   return (
     <div className="main__container">
       <h1>Coding Test - Mediusware Ltd.</h1>
+      <ProductInformation productInfo={productInfo} />
     </div>
   );
 };

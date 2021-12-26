@@ -1,0 +1,23 @@
+.table__item {
+  text-align: center;
+  border-bottom: 1px solid;
+  padding: 20px;
+  border-color: #bdc3c7;
+}
+
+.table__item_header {
+  border-bottom: 1px solid;
+  padding: 20px;
+  border-top: 1px solid;
+  border-color: #bdc3c7;
+}
+.table__item_desc {
+  width: 350px;
+  text-align: justify;
+  border-bottom: 1px solid;
+  padding: 20px;
+  border-color: #bdc3c7;
+}
+.custom_wr {
+  line-height: 1.8;
+}
