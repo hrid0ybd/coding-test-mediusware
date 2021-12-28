@@ -2,14 +2,14 @@
 
 <!-- PROJECT Intro -->
 <br />
-<div align="center">
+<!-- <div align="center">
   <a href="">
     <img src="https://mediusware.com/wp-content/uploads/2021/02/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Coding Test - Mediusware Ltd.</h3>
 
-</div>
+</div> -->
 
 ### Note
 

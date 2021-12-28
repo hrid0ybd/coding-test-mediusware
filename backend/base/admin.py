@@ -28,7 +28,7 @@ class VariantAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
-admin.site.site_header = 'Coding Test - Mediusware Ltd.'
+admin.site.site_header = 'Demo CRUD Project'
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductImage, ProductImageAdmin)
 admin.site.register(ProductVariant, ProductVariantPriceAdmin)
