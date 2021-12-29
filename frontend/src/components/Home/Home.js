@@ -13,6 +13,10 @@ const Home = () => {
     productImages: [],
   });
 
+  // productInfo.products.map((product, productIndex) => {
+  //   return ;
+  // });
+
   useEffect(() => {
     const fetchData = async () => {
       const product = await axios(`${APiEndPoints.PRODUCT_URL}`);

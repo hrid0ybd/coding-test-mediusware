@@ -3,14 +3,18 @@ import GlobalModal from "../GlobalModal/GlobalModal";
 import "../GlobalModal/GlobalModal.css";
 
 const Information = ({ productInfo }) => {
+  const [updatedValue, setUpdatedValue] = useState({});
+
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleEditProduct = () => {
-    console.log("Clicked");
+  const handleChange = (event) => {
+    setUpdatedValue({ [event.target.name]: event.target.value });
+    console.log("updatedValue", updatedValue);
   };
+
   return (
     <div>
       <h1>Products</h1>
@@ -137,10 +141,78 @@ const Information = ({ productInfo }) => {
                     className={"form__builder__modal ar__options_modal"}
                   >
                     <div>
-                      <h1>Check</h1>
+                      <form method="POST" action="">
+                        <label for="title">Title</label>
+                        <br />
+                        <input
+                          type="text"
+                          id="title"
+                          name="title"
+                          defaultValue="Title"
+                          onChange={handleChange}
+                        />
+                        <br />
+                        <br />
+                        <label for="description">Description</label>
+                        <br />
+                        <textarea
+                          className="description__edit"
+                          id="description"
+                          name="description"
+                          rows="4"
+                          cols="50"
+                          defaultValue="Description"
+                          onChange={handleChange}
+                        ></textarea>
+                        <br />
+                        <br />
+
+                        <label for="variants">Choose a color:</label>
+                        <select name="colors" id="colors">
+                          <option defaultValue="Red" onChange={handleChange}>
+                            Red
+                          </option>
+                        </select>
+                        <br />
+                        <br />
+
+                        <label for="variants">Choose a size:</label>
+                        <select name="variants" id="variants">
+                          <option defaultValue="XXL" onChange={handleChange}>
+                            XXL
+                          </option>
+                        </select>
+                        <br />
+                        <br />
+
+                        <label for="price">Price</label>
+                        <br />
+                        <input
+                          type="number"
+                          id="price"
+                          name="price"
+                          defaultValue="10"
+                          onChange={handleChange}
+                        />
+                        <br />
+                        <br />
+
+                        <label for="stock">Stock</label>
+                        <br />
+                        <input
+                          type="number"
+                          id="stock"
+                          name="stock"
+                          defaultValue="20"
+                          onChange={handleChange}
+                        />
+
+                        <br />
+                        <br />
+                        <input type="submit" value="Submit" />
+                      </form>
                     </div>
                   </GlobalModal>
-                  ;
                 </td>
               </tr>
             );

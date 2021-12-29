@@ -21,3 +21,15 @@
 .custom_wr {
   line-height: 1.8;
 }
+
+.description__edit {
+  max-width: 180px;
+}
+
+select#variants {
+  margin-left: 44px;
+}
+
+select#colors {
+  margin-left: 37px;
+}
