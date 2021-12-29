@@ -3,11 +3,6 @@ from . import models
 from . import serializers
 
 
-class ProductVariantPriceViewSet(viewsets.ModelViewSet):
-    queryset = models.ProductVariantPrice.objects.all()
-    serializer_class = serializers.ProductVariantPriceSerializer
-
-
 class ProductVariantViewSet(viewsets.ModelViewSet):
     queryset = models.ProductVariant.objects.all()
     serializer_class = serializers.ProductVariantSerializer
@@ -18,9 +13,9 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.ProductSerializer
 
 
-class VariantViewSet(viewsets.ModelViewSet):
-    queryset = models.Variant.objects.all()
-    serializer_class = serializers.VariantSerializer
+class ProductDetailsViewSet(viewsets.ModelViewSet):
+    queryset = models.ProductDetails.objects.all()
+    serializer_class = serializers.ProductDetailsSerializer
 
 
 class ProductImageViewSet(viewsets.ModelViewSet):
